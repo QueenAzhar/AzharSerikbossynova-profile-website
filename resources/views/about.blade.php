@@ -148,7 +148,7 @@
 			margin-bottom: 0;
 			font-size: 16px;
 			line-height: 24px;
-			color: #d6c6b2;b
+			color: #d6c6b2;
 		}
 		
 		.btn{
