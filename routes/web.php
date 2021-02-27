@@ -21,9 +21,6 @@ Route::get('/welcome', function () {
 })->name('home');
 
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
 
 Route::get('/about', function () {
     return view('about');
