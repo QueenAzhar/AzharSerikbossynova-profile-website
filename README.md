@@ -4,4 +4,5 @@ In below,you can see screenshots of my cv-website(personal website)
 ![git1](https://user-images.githubusercontent.com/78680517/108742932-568bd880-7549-11eb-937a-7c621566864b.jpg)
 ![git2](https://user-images.githubusercontent.com/78680517/108742927-55f34200-7549-11eb-8de5-35ab0c09056b.jpg)
 This is data of post(with route "/post")
-![post_image](https://user-images.githubusercontent.com/78680517/109392764-fc1abf80-792e-11eb-878b-5b2c626229b6.jpg)
+![post_new_image](https://user-images.githubusercontent.com/78680517/109422280-f3d48a00-79eb-11eb-82a4-f10814251e26.jpg)
+
