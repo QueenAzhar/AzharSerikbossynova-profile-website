@@ -46,12 +46,21 @@ Route::get('/post/create',function(){
 Route::get(' /post',function(){
         $results =Post::all();
         echo "<h1>This is data of post</h1>";
+        echo '<table>';
         foreach($results as $post){
-            echo "<b>id is: </b>".$post->id;
-            echo "<br>";
-            echo "<b>title is: </b>".$post->title;
-            echo "<br>";
-            echo "<b>body is: </b>".$post->body;
-            echo "<br>";
+           echo "<tr>";
+            echo "<td><b>Blog id </b></td>";
+            echo "<td><b>Blog title </b></td>";
+            echo "<td><b>Blog body </b></td>";
+            echo "</tr>";
+            echo "<tr>";
+            echo "<td>".$post->id."</td>";
+            echo "<td>".$post->title."</td>";
+            echo "<td>".$post->body."</td>";
+            echo "</tr>";
+           
         }
+        echo '</table>';
+
+        return view('post');
     });
