@@ -36,14 +36,12 @@ Route::get('/post/create',function(){
     DB::table('post')->insert([
         'title' =>'Khan Academy',
         'body' =>' Its website also includes supplementary practice exercises and materials for educators.',
-        'title' =>'Daryn talaby',
-        'body' =>' Acamedy allarga le proprie competenze con l',
-        'title' =>'Dostyk bilim',
-        'body' =>'Обучение английскому языку — кропотливый процесс. Овладеть им в совершенстве за 1-2 месяца — невозможно. '
+        
+       
     ]);
     
 });
-Route::get(' /post',function(){
+Route::get('/post',function(){
         $results =Post::all();
         echo "<h1>This is data of post</h1>";
         echo '<table>';
