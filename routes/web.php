@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Post;
 
+use App\Http\Controllers\BlogController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,10 +37,9 @@ Route::get('/contact', function () {
 Route::get('/post/create',function(){
     DB::table('post')->insert([
         'title' =>'Khan Academy',
-        'body' =>' Its website also includes supplementary practice exercises and materials for educators.',
-        
-       
+        'body' =>' Its website also includes supplementary practice exercises and materials for educators.'
     ]);
+
     
 });
 Route::get('/post',function(){
@@ -62,3 +63,5 @@ Route::get('/post',function(){
 
         return view('post');
     });
+
+Route ::get('/blog',[BlogController::class,'index']);
