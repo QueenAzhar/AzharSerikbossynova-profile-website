@@ -36,8 +36,8 @@ Route::get('/contact', function () {
 
 Route::get('/post/create',function(){
     DB::table('post')->insert([
-        'title' =>'Khan Academy',
-        'body' =>' Its website also includes supplementary practice exercises and materials for educators.'
+        'title' =>'Khan ',
+        'body' =>' Its website also includes supplementary practice exercises'
     ]);
 
     
@@ -65,3 +65,8 @@ Route::get('/post',function(){
     });
 
 Route ::get('/blog',[BlogController::class,'index']);
+
+Route ::get('blog/create',function() {
+    return view('blog.create');
+});
+Route ::post('blog/create',[BlogController::class,'store'])->name('add-post');
