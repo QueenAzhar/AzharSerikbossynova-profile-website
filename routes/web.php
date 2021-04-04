@@ -4,8 +4,11 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Post;
+use App\Models\Employee;
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\EmployeeController;
 
 
 /*
@@ -72,3 +75,10 @@ Route ::get('blog/create',function() {
 Route::post('blog/create',[BlogController::class,'store'])->name('add-post');
 
 Route::get('post/{id}',[BlogController::class,'get_post']);
+
+Route::get('/employee','App\Http\Controllers\EmployeeController@index');
+Route::post('/addimage','App\Http\Controllers\EmployeeController@store')->name('addimage');
+
+Route::get('/employeepage','App\Http\Controllers\EmployeeController@display');
+
+Route::get('/send-email', [MailController::class, 'sendEmail']);
