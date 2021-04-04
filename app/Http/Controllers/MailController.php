@@ -13,11 +13,11 @@ class MailController extends Controller
     public function sendEmail()
     {
        $details = [
-           'title' => 'Mail from Susrfside',
+           'title' => 'Mail from Sdu',
            'body' => 'This is for testing'
        ];
 
-       Mail::to("laura.daurenova01@gmail.com")->send(new DemoMail($details));
+       Mail::to("190103063@stu.sdu.edu.kz")->send(new DemoMail($details));
        return "Email sent";
     }
 }

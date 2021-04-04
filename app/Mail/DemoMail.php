@@ -25,6 +25,6 @@ class DemoMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Test Mail from Susrfside')->view('mails.demo');
+        return $this->subject('Test Mail from Sdu')->view('mails.demo');
     }
 }
