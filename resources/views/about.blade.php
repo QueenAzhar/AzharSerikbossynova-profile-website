@@ -156,6 +156,44 @@
 			border-radius: 0;
 			padding: 10px 20px;
 		}
+
+		.dropbtn {
+			
+  background-color: black;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+	float:right;
+	margin-top:-50px;
+margin-right:60px;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: black;}
 		
 		
 		
@@ -166,12 +204,21 @@
  </head>
  <body><br>
  <br>
- <br><div class="logo"><a href="{{ route('home')}}">Portfo<span>lio.</span></a></div>
+ <br><div class="logo"><a href="{{ route('home')}}">@lang('lang.portfo')<span>@lang('lang.lio')</span></a></div>
  <br>
  <br>
  <br>
+ <div class="dropdown">
+  <button class="dropbtn">@lang('lang.language')</button>
+  <div class="dropdown-content">
+    <a href="locale/en"><img src="{{asset('img/us.jpg')}}" style="width:50px; height:50px;"alt="">@lang('lang.english')</a>
+    <a href="locale/kz"><img src="{{asset('img/kz.jpeg')}}" style="width:50px; height:50px;"alt="">@lang('lang.kazakh')</a>
+    <a href="locale/ru"><img src="{{asset('img/rus.jpg')}}" style="width:50px; height:45px;"alt="">@lang('lang.russian')</a>
+  </div>
+</div>
  	
  	<section id="about">
+	 
  		
 	<div class="container">
 		<div class="row">
@@ -180,6 +227,8 @@
             <img class="shape" src="images/about_tringle.png" alt="">
             
             <img class="pro" src="images/profile.png" alt="">
+
+			
             
 
 			</div>
@@ -187,17 +236,15 @@
 		<br>
 		<div class="col-md-7 about-right">
 			
-			<h2 class="color-3"><b>About Me</b>
+			<h2 class="color-3"><b>@lang('lang.about_menu')</b>
 			</h2>
 			
 			<p class="p-first text-white">
-				<p>My name's Azhar.I'm currently studying at SDU university,where my faculty is Engineering.
-                                    While you study, lots of things start changing: your thoughts, your ideas, people who surround you. You stop being a child. You realize that you’ve grown. You start earning your first money. Lots of students nowadays work and study at the same time. Eventually you understand that it’s great to have the job you like. High education may help a lot in getting your dream job in future.
-</p>
+				<p>@lang('lang.paragraph')</p>
 			</p>
 			
 			<h3 class="color-3 social-link-text">
-				<button class="btn " >Hire Me</button>
+				<button class="btn " >@lang('lang.hire_me')</button>
 			</h3>
 			
 			<ul class="about-link">

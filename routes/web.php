@@ -82,3 +82,9 @@ Route::post('/addimage','App\Http\Controllers\EmployeeController@store')->name('
 Route::get('/employeepage','App\Http\Controllers\EmployeeController@display');
 
 Route::get('/send-email', [MailController::class, 'sendEmail']);
+
+Route::get('locale/{locale}',function($locale){
+    Session::put('locale',$locale);
+    return redirect()->back();
+
+});
